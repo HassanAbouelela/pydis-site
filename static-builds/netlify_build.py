@@ -27,7 +27,7 @@ def get_build_artifact() -> typing.Tuple[int, str]:
     The return is a tuple of the check suite ID, and the URL to the artifacts.
     """
     print("Fetching build URL.")
-
+    raise Exception(os.getenv("COMMIT_REF"))
     if os.getenv("PULL_REQUEST").lower() == "true":
         print(f"Fetching data for PR #{os.getenv('REVIEW_ID')}")
 
