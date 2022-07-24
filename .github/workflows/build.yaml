@@ -49,10 +49,10 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          cache-from: type=registry,ref=ghcr.io/python-discord/site:latest
+          cache-from: type=registry,ref=ghcr.io/hassanabouelela/site:latest
           cache-to: type=inline
           tags: |
-            ghcr.io/python-discord/site:latest
-            ghcr.io/python-discord/site:${{ steps.sha_tag.outputs.tag }}
+            ghcr.io/hassanabouelela/site:latest
+            ghcr.io/hassanabouelela/site:${{ steps.sha_tag.outputs.tag }}
           build-args: |
             git_sha=${{ github.sha }}
